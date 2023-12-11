@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.battery.api">
+
+    <application android:allowBackup="true">
+        <provider
+            android:name="cn.huolala.battery.api.hookstub.lifecycle.BatteryLaunch"
+            android:authorities="${applicationId}.com.battery.provider"
+            android:enabled="true"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/battery_file_paths" />
+        </provider>
+
+        <!--    location跨进程通讯service-->
+        <service
+            android:name="cn.huolala.battery.api.hookstub.location.LocationMessengerService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <!--                内部识别的action-->
+                <action android:name="com.battery.main.process" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

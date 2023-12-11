@@ -1,0 +1,6 @@
+
+rootProject.name = "BatteryFinder"
+include ':app'
+include ':lib_battery_plugin'
+include ':lib_battery_api'
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/alarm"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="启动一个alarm" />
+
+    <Button
+        android:id="@+id/blue_tooth_text"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="蓝牙 " />
+
+    <Button
+        android:id="@+id/cpu"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="cpu " />
+
+    <Button
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="定位 " />
+
+    <Button
+        android:id="@+id/ipc_location"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="多进程定位 " />
+
+    <Button
+        android:id="@+id/sensor"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="Sensor " />
+
+
+    <Button
+        android:id="@+id/power_wl"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="Power WakeLock " />
+
+    <Button
+        android:id="@+id/wifi_wl"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="Wifi WakeLock " />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+        <TextView
+
+            android:id="@+id/result_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="请观察log输出"
+            android:textSize="20sp" />
+
+    </ScrollView>
+
+
+</LinearLayout>

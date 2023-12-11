@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+apply plugin: 'maven'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 29
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri(maven_repository_url)) {
+                authentication(userName: maven_user_name, password: maven_password)
+            }
+            pom.groupId = maven_group_id
+            pom.artifactId = maven_res_artifact_id
+            pom.version = maven_res_version
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.3.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0"
+    implementation 'androidx.lifecycle:lifecycle-process:2.5.1'
+    implementation "com.google.code.gson:gson:2.8.8"
+}
