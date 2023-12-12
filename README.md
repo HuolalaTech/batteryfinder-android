@@ -8,7 +8,7 @@
 目前支持：定位，蓝牙，Alarm，PowerWakeLock，WifiWakeLock，Sensor等多层次功耗检测
 
 ## 详细介绍
-待补充
+https://juejin.cn/post/7311343224546574346
 
 ## 使用介绍
 ### 编译引入插件
