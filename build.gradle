@@ -8,13 +8,15 @@ task clean(type: Delete) {
 buildscript {
     repositories {
         maven {url uri('./repositories')}
-        google()
         mavenCentral()
+
+        google()
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.4'
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10'
-        classpath 'cn.huolala.battryfinder:plugin:2.0.1'
+        classpath 'cn.huolala:batteryplugin:1.0.2'
     }
 
 }

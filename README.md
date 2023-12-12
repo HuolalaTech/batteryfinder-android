@@ -14,12 +14,16 @@ https://juejin.cn/post/7311343224546574346
 ### 编译引入插件
 《声明》由于目前业务项目还在AGP版本还在7以下，所以当前仅支持7以下的插件，后续补充7以上的插件
 
-todo 待上传地址
+根目录build.gradle中配置插件
+```
+classpath 'cn.huolala:batteryplugin:1.0.2'
+```
 ### gradle 配置
-build.gradle里面添加插件依赖即可
+使用module中build.gradle里面添加插件依赖即可
 ```
 apply plugin: 'com.battery.plugins'
 ```
+
 同时选择开启插桩的类型，见app 中build.gradle
 ```
 BatteryHookConfig{
@@ -38,6 +42,12 @@ BatteryHookConfig{
 // 设置不插桩的classname
   whiteList = ['whiteList1','whiteList2']
 }
+```
+
+使用module中添加aar依赖
+
+```
+implementation 'cn.huolala:batteryapi:1.0.2'
 ```
 
 ### 必要的框架初始化设置
@@ -71,7 +81,7 @@ BatteryHookConfig{
         )
 ```
 
-#### step2 
+#### step2
 
 设置自己需要的基准电源文件（power_profile.xml）
 
