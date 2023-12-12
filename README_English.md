@@ -9,7 +9,15 @@ Current support: location, Bluetooth, Alarm, PowerWakeLock, WifiWakeLock, Sensor
 
 ## Getting started
 ### Compile and import plugin
-todo 待上传地址
+firstly,you should import plugin in project build.gradle
+```
+classpath 'cn.huolala:batteryplugin:1.0.2'
+```
+secondly,import api aar in module build.gradle
+```
+implementation 'cn.huolala:batteryapi:1.0.2'
+```
+
 ### gradle configuration
 add this code in build.gradle
 ```

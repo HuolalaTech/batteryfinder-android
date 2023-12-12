@@ -27,9 +27,9 @@ uploadArchives {
         mavenDeployer {
             //本地Maven
             repository(url: uri('../repositories'))
-            pom.groupId = 'cn.huolala.battryfinder'
-            pom.artifactId = 'plugin'
-            pom.version = '2.0.1'
+            pom.groupId = 'cn.huolala'
+            pom.artifactId = 'batteryplugin'
+            pom.version = '1.0.2'
         }
     }
 }
